@@ -4,7 +4,7 @@
  "name" : "特殊人材派遣会社FANGFANGrogo",
  "scope" : "/",
  "display" : "standalone",
- "start_url" : "https://fang-sptempagency.github.io/",
+ "start_url" : "https://fang-sptempagency.github.io/index.html",
  "short_name" : "FANG",
  "theme_color" : "transparent",
  "description" : "特殊人材派遣会社FANG 優秀なスタッフがお客様のビジネスをお手伝いします。",
