@@ -131,7 +131,7 @@
 /*--TIMELINE--*/
 .heji-series-background {
     width: 100%;
-    height: 36em;
+    height: 34.5em;
     border-right: solid 4px;
     border-right-color: var(--HEJIcolor);
 }
@@ -161,7 +161,7 @@
     width: 2em;
     background: -webkit-gradient(top, var(--CARDcolor), transparent);
     background: -moz-linear-gradient(top, var(--CARDcolor), transparent);
-    background: linear-gradient(to bottom, var(--CARDcolor), transparent);
+    background: linear-gradient(to bottom, var(--CARDcolor), rgba(255,255,255,0));
 }
 
 .heji-series > .gradation {
@@ -192,16 +192,24 @@
     .series-wrapper {
         display: block;
         margin: 0 auto;
-        width: 70%;
         position: relative;
         justify-content: center;
         height: 65em;
     }
 
+    .series-title{
+        font-size: 2.5em;
+    }
+    
+    .series-title::after{
+        content: " 編";
+        font-size: 0.6em;
+    }
+    
     .heji-series {
         position: absolute;
         width: 100%;
-        margin-left: 3em;
+        margin-left: 1.5em;
     }
     
     .honda-series {
@@ -209,11 +217,12 @@
     }
     
     .heji-series-contents > .series-title {
+        
         padding-left: 0.5em;
     }
 
     .honda-series-contents > .series-title {
-        padding-left: 1.5em;
+        padding-left: 1em;
         text-align: left;
     }
     
@@ -226,8 +235,24 @@
     }
 
     /*--EPISODE--*/
-    .honda-series .episode {
-        padding-left: 2.5em;
+    .episode-title-wrapper {
+        padding-bottom: 1em;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 4.8em 1fr;
+    }
+    
+    .episode-title-wrapper .title {
+        grid-column: 2;
+        grid-row: 1;
+        padding-left: 0.5em;
+        font-size: 1.4em;
+        font-weight: bold;
+        line-height: 1.5em;
+    }
+    
+    .honda-series .episode{
+        padding-left:1em;
     }
     
     .null {
