@@ -196,10 +196,6 @@
         justify-content: center;
         height: 65em;
     }
-
-    .series-title{
-        font-size: 2.5em;
-    }
     
     .series-title::after{
         content: " 編";
