@@ -1,5 +1,4 @@
 {
- "dir" : "ltr",
  "name" : "特殊人材派遣会社FANG",
  "scope" : "/",
  "display" : "standalone",
@@ -92,4 +91,5 @@
          "src": "https://fang-sptempagency.github.io/favicon/apple-touch-icon-180x180.png",
          "sizes": "180x180"
      }
- ]}
+ ]
+}
