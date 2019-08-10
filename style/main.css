@@ -20,6 +20,8 @@ html {
 body {
     position:relative;
     font-family: "Helvetica Neue", ヒラギノ角ゴ, Helvetica, Arial, sans-serif;
+    margin:0;
+    padding:0;
     
     height:100%;
     
@@ -86,15 +88,17 @@ a:hover{
 }
 
 /*--CONTENTS BACKGROUND--*/
-#whitecard{
+#whitecard-wrapper{
     position:absolute;
-    top:2em;
+    top:0;
     left:0;
     right:0;
-
+    padding:2em 1em;
+}
+#whitecard{
     max-width: 640px;
-    padding: 2em 2em 4em;
-    margin:0 auto 2em;
+    padding: 2em 2em;
+    margin:1em auto 2em;
     background: var(--CARDcolor);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
 
