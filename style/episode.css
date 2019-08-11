@@ -6,6 +6,10 @@
     --SERIESbackground:calc(var(--HEJIspacing) + 32em);
 }
 
+_::-webkit-full-page-media, _:future, :root{
+    --HEJIspacing:41em;
+}
+
 /*--SERIES--*/
 .series-wrapper {
     display: flex;
