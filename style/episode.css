@@ -1,6 +1,6 @@
 /*--VARIABLE--*/
 :root{
-    --HEJIspacing:38em;
+    --HEJIspacing:44em;
     --HONDAspacing:calc(var(--HEJIspacing) + 15em);
     --HONDAbackground:calc(var(--HEJIspacing) + 23em);
     --SERIESbackground:calc(var(--HEJIspacing) + 32em);
@@ -63,14 +63,7 @@
 }
 
 .episode-title-wrapper {
-    padding-bottom: 1em;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 5em 1fr;
-}
-
-.episode-title-wrapper2 {
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 .no {
@@ -79,29 +72,11 @@
     line-height: 1em;
 }
 
-.episode-title-wrapper .no {
-    grid-column: 1;
-    grid-row: 1;
-}
-
 .title {
+    padding-top: 0.5em;
     font-size: 1.7em;
     font-weight: bold;
     line-height: 1.2em;
-}
-
-.episode-title-wrapper .title {
-    grid-column: 2;
-    grid-row: 1;
-    padding-left: 0.5em;
-    font-size: 1.7em;
-    font-weight: bold;
-    line-height: 1.2em;
-}
-
-.honda-series .episode-title-wrapper .title {
-    font-size: 2.8em;
-    line-height: 1.6em;
 }
 
 .lyric {
@@ -207,15 +182,11 @@
     /*--SERIES--*/
     .series-wrapper {
         display: block;
+        width:90%;
         margin: 0 auto;
         position: relative;
         justify-content: center;
         height: var(--SERIESbackground);
-    }
-    
-    .series-title::after{
-        content: " 編";
-        font-size: 0.6em;
     }
     
     .heji-series {
@@ -247,22 +218,6 @@
     }
 
     /*--EPISODE--*/
-    .episode-title-wrapper {
-        padding-bottom: 1em;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 4.8em 1fr;
-    }
-    
-    .episode-title-wrapper .title {
-        grid-column: 2;
-        grid-row: 1;
-        padding-left: 0.5em;
-        font-size: 1.4em;
-        font-weight: bold;
-        line-height: 1.5em;
-    }
-    
     .honda-series .episode{
         padding-left:1em;
     }
