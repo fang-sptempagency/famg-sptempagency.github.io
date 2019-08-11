@@ -1,6 +1,6 @@
 /*--VARIABLE--*/
 :root{
-    --HEJIspacing:40em;
+    --HEJIspacing:38em;
     --HONDAspacing:calc(var(--HEJIspacing) + 15em);
     --HONDAbackground:calc(var(--HEJIspacing) + 23em);
     --SERIESbackground:calc(var(--HEJIspacing) + 32em);
@@ -210,7 +210,7 @@
         margin: 0 auto;
         position: relative;
         justify-content: center;
-        height: 65em;
+        height: var(--SERIESbackground);
     }
     
     .series-title::after{
