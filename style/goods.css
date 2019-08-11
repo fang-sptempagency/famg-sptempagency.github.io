@@ -46,13 +46,9 @@
 
 /*--PRICE--*/
 .price {
-    padding: 0.4em 1em;
-    margin: 1em 0;
-
-    border: solid 1px;
-    border-color: var(--HEJIcolor);
-    background-color: #FFF;
-
+    padding: 0.4em 0;
+    
+    font-size:1.2em;
     color: var(--HEJIcolor);
     font-weight: bold;
 }
