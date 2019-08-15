@@ -1,249 +1,29 @@
-/*--VARIABLE--*/
-:root{
-    --HEJIspacing:44em;
-    --HONDAspacing:calc(var(--HEJIspacing) + 15em);
-    --HONDAbackground:calc(var(--HEJIspacing) + 23em);
-    --SERIESbackground:calc(var(--HEJIspacing) + 32em);
-}
-
-_::-webkit-full-page-media, _:future, :root{
-    --HEJIspacing:41em;
-}
-
-/*--SERIES--*/
-.series-wrapper {
-    display: flex;
-    height: var(--SERIESbackground);
-    z-index: 0;
-}
-
-.series-wrapper ul {
+.pages-1cover li{
     list-style: none;
-
-}
-
-.heji-series {
-    position: relative;
-    width: 50%;
-    margin-right: 2em;
-    padding-right: 1em;
-    z-index: 20;
-}
-
-.honda-series {
-    width: 50%;
-    position: relative;
-    z-index: 1;
-}
-
-/*--SERIES TITLE--*/
-.series-title{
-    font-size: 3em;
-    font-weight: bold;
-}
-
-.honda-series-contents > .series-title {
-    text-align: right;
-}
-
-.series-title::after{
-    content: " 編";
-    font-size: 0.8em;
-    font-weight: normal;
-}
-
-/*--EPISODE--*/
-.episode {
-    padding: 1em 0;
-}
-
-.episode a{
-    text-decoration: none;
-    color: var(--TEXTcolor);
-}
-
-.null {
-    height: var(--HONDAspacing);
-}
-
-.episode-title-wrapper {
-    padding-bottom: 0.5em;
-}
-
-.no {
-    font-size: 4.2em;
-    font-weight: bold;
-    line-height: 1em;
-}
-
-.title {
-    padding-top: 0.5em;
-    font-size: 1.7em;
-    font-weight: bold;
-    line-height: 1.2em;
-}
-
-.lyric {
-    width: 100%;
-    padding: 0.5em 0 2em 0;
-    font-size: 0.6em;
-}
-
-.episode-part {
-    width: auto;
-    border: solid 1px;
-    padding: 0.3em;
-}
-
-.heji-series-contents li.episode a:hover {
-    -webkit-animation: heji-fade 1s 1;
-    -moz-animation: heji-fade 1s 1;
-}
-
-@-webkit-keyframes heji-fade {
-    0% { color: var(--HEJIcolor);}
-    100% { color: var(--TEXTcolor); }
-}
-@-moz-keyframes heji-fade {
-    0% { color: var(--HEJIcolor); }
-    100% { color: var(--TEXTcolor); }
-}
-
-.honda-series-contents li.episode a:hover {
-    -webkit-animation: honda-fade 1s 1;
-    -moz-animation: honda-fade 1s 1;
-}
-
-@-webkit-keyframes honda-fade {
-    0% { color: var(--HONDAcolor);}
-    100% { color: var(--TEXTcolor);}
-}
-@-moz-keyframes honda-fade {
-    0% { color: var(--HONDAcolor);}
-    100% { color: var(--TEXTcolor);}
-}
-
-/*--TIMELINE--*/
-.heji-series-background {
-    width: 100%;
-    height: var(--HEJIspacing);
-    border-right: solid 4px;
-    border-right-color: var(--HEJIcolor);
-}
-
-.heji-series-contents {
-    position: absolute;
-    top: 0;
-}
-
-.honda-series-background {
-    width: 100%;
-    height: var(--HONDAbackground);
-    border-left: solid 4px;
-    border-left-color: var(--HONDAcolor);
-}
-
-.honda-series-contents {
-    position: absolute;
-    width: 100%;
-    top: 0;
-}
-
-.gradation {
-    position: absolute;
-    top: 0;
-    height: 5em;
-    width: 2em;
-    background: -webkit-gradient(top, var(--CARDcolor), transparent);
-    background: -moz-linear-gradient(top, var(--CARDcolor), transparent);
-    background: linear-gradient(to bottom, var(--CARDcolor), rgba(255,255,255,0));
-}
-
-.heji-series > .gradation {
-    right: 0;
-}
-
-.episode::before{
-    content: "●";
-    font-size: 3.5em;
-    position: absolute;
-}
-
-.heji-series .episode::before {
-    left: 5.83em;
-    color: var(--HEJIcolor);
-}
-
-.honda-series .episode::before {
-    left: -0.27em;
-    color: var(--HONDAcolor);
+    width:50%;
+    float:right;
 }
 
 
-/*--SMARTPHONE--*/
-@media (max-width:740px) {
-    
-    /*--SERIES--*/
-    .series-wrapper {
-        display: block;
-        width:90%;
-        margin: 0 auto;
-        position: relative;
-        justify-content: center;
-        height: var(--SERIESbackground);
-    }
-    
-    .heji-series {
-        position: absolute;
-        width: 100%;
-        margin-left: 1.5em;
-    }
-    
-    .honda-series {
-        width: 100%;
-    }
-    
-    .heji-series-contents > .series-title {
-        
-        padding-left: 0.5em;
-    }
+.pages-wrapper {
+    width:100%;
+}
 
-    .honda-series-contents > .series-title {
-        padding-left: 1em;
-        text-align: left;
-    }
-    
-    .honda-series-contents {
-        top: var(--HONDAspacing);
-    }
-    
-    .heji-series > .gradation {
-        left: 0;
-    }
+.pages-wrapper li,
+pages-wrapper ul{
+    padding:0;
+    margin:0;
+}
 
-    /*--EPISODE--*/
-    .honda-series .episode{
-        padding-left:1em;
-    }
-    
-    .null {
-        display: none;
-    }
+.pages-wrapper li img{
+    width:100%;
+}
 
-    /*--TIMELINE--*/
-    .heji-series-background {
-        border-right: none;
-        border-left: solid 4px;
-        border-left-color: var(--HEJIcolor);
-    }
+ul.pages-1cover {
+    display: flex-box;
+    width:100%;
+}
 
-    .heji-series .episode::before {
-        left: -0.27em;
-    }
-
-    .honda-series .episode::before {
-        position: absolute;
-        left: -0.28em;
-    }
-    
+ul.pages-1cover li:nth-child(1){
+    width:100%;
 }
