@@ -1,29 +1,24 @@
-.pages-1cover li{
-    list-style: none;
-    width:50%;
-    float:right;
-}
-
-
 .pages-wrapper {
     width:100%;
 }
 
 .pages-wrapper li,
-pages-wrapper ul{
+.pages ul{
     padding:0;
     margin:0;
-}
-
-.pages-wrapper li img{
     width:100%;
+    list-style: none;
 }
 
-ul.pages-1cover {
-    display: flex-box;
-    width:100%;
+.pages li{
+    position: relative;
+    overflow: hidden;
 }
 
-ul.pages-1cover li:nth-child(1){
+.pages li img{
+    width:110.3%;
+}
+
+.pages li:nth-child(1){
     width:100%;
 }
