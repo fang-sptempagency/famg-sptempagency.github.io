@@ -19,6 +19,11 @@
     width:110.3%;
 }
 
-.pages li:nth-child(1){
+.pages li:nth-child(1) img{
     width:100%;
+}
+
+.pages li:nth-child(2n) img{
+    position:relative;
+    left:-10.3%;
 }
