@@ -1,8 +1,3 @@
-.pages-wrapper {
-    width:100%;
-}
-
-.pages-wrapper li,
 .pages ul{
     padding:0;
     margin:0;
@@ -11,19 +6,10 @@
 }
 
 .pages li{
-    position: relative;
-    overflow: hidden;
+    width:100%;
+    margin-bottom:3em;
 }
 
 .pages li img{
-    width:110.3%;
-}
-
-.pages li:nth-child(1) img{
     width:100%;
-}
-
-.pages li:nth-child(2n) img{
-    position:relative;
-    left:-10.3%;
 }
