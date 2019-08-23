@@ -1,6 +1,6 @@
 /*--VARIABLE--*/
 :root{
-    --HEJIspacing:44em;
+    --HEJIspacing:61em;
     --HONDAspacing:calc(var(--HEJIspacing) + 15em);
     --HONDAbackground:calc(var(--HEJIspacing) + 23em);
     --SERIESbackground:calc(var(--HEJIspacing) + 32em);
