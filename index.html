@@ -62,6 +62,7 @@
     <link rel="stylesheet" href="style/photo.css">
 
     <script src="https://kit.fontawesome.com/5d9879d3e5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 
 </head>
 
@@ -117,12 +118,32 @@
                         <li>
                             <input id="menu_check2" class="menu-check" type="checkbox">
                             <label class="menu" for="menu_check2">
-                                <div class="menu-title">EVENTS</div>
+                                <div class="menu-title">EVENTS <i class="fas fa-exclamation-circle"></i></div>
                             </label>
                             <div class="menu-contents">
                                 <!--COMITIA129情報-->
                                 <h2>COMITIA129</h2>
                                 <section>
+                                   <h3>After report</h3>
+                                    <canvas id="myChart"></canvas>
+                                    <script>
+                                    new Chart(document.getElementById("myChart"), {
+                                    type: "doughnut",
+                                    data: {
+                                    labels: ["赤", "青", "黄色"],
+                                    datasets: [
+                                    {
+                                    data: [300, 50, 100],
+                                    backgroundColor: [
+                                    "rgb(255, 99, 132)",
+                                    "rgb(54, 162, 235)",
+                                    "rgb(255, 205, 86)"
+                                    ]
+                                    }
+                                    ]
+                                    }
+                                    });
+                                    </script>
                                     <h3>Outline</h3>
                                     <table class="spec">
                                         <tr>
@@ -242,7 +263,7 @@
                         <li>
                             <input id="menu_check3" class="menu-check" type="checkbox">
                             <label class="menu" for="menu_check3">
-                                <div class="menu-title">SERIES <i class="fas fa-exclamation-circle"></i></div>
+                                <div class="menu-title">SERIES</div>
                             </label>
                             <div class="menu-contents">
                                 <div class="series-wrapper">
