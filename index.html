@@ -124,25 +124,59 @@
                                 <!--COMITIA129情報-->
                                 <h2>COMITIA129</h2>
                                 <section>
-                                   <h3>After report</h3>
+                                    <h3>After report</h3>
                                     <canvas id="myChart"></canvas>
+                                    <script src="COMITIAchart.js"></script>
                                     <script>
-                                    new Chart(document.getElementById("myChart"), {
-                                    type: "doughnut",
-                                    data: {
-                                    labels: ["赤", "青", "黄色"],
-                                    datasets: [
-                                    {
-                                    data: [300, 50, 100],
-                                    backgroundColor: [
-                                    "rgb(255, 99, 132)",
-                                    "rgb(54, 162, 235)",
-                                    "rgb(255, 205, 86)"
-                                    ]
-                                    }
-                                    ]
-                                    }
-                                    });
+                                        new Chart(document.getElementById("myChart"), {
+                                            type: "bar",
+                                            data: {
+                                                labels: ['11時', '12時', '13時', '14時', '15時'],
+                                                datasets: [{
+                                                    data: [5, 7, 3, 4, 1],
+                                                    backgroundColor: "rgb(250,128,0)",
+                                                    borderColor:"rgb(250,128,0)",
+                                                    borderWidth:1
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                legend: {
+                                                    display: false
+                                                },
+                                                title: {
+                                                    display: false
+                                                },
+                                                scales: {
+                                                    yAxes: [{
+                                                        display: true,
+                                                        scaleLabel:{
+                                                            display: true,
+                                                            labelString: '来場者数',
+                                                            fontColor:"black"
+                                                        },
+                                                        ticks: {
+                                                            min: 0,
+                                                            max: 10,
+                                                            stepSize:2,
+                                                            fontColor:"black"
+                                                        }
+                                                    }],
+                                                    xAxes: [{
+                                                        display: true,
+                                                        scaleLabel:{
+                                                            display: true,
+                                                            labelString: '時間帯',
+                                                            fontColor:"black"
+                                                        },
+                                                        gridLines:{display:false},
+                                                        ticks:{
+                                                            fontColor:"black"
+                                                        }
+                                                    }]
+                                                }
+                                            }
+                                        });
                                     </script>
                                     <h3>Outline</h3>
                                     <table class="spec">
