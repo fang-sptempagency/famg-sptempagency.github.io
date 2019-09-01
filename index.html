@@ -2,11 +2,6 @@
 <html>
 
 <head>
-    <!-- PWA -->
-    <link rel=”manifest” href="/manifest.json">
-    <script src="pwabuilder-sw-register.js"></script>
-    <script src="pwabuilder-sw.js"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139550558-2"></script>
     <script>
@@ -61,8 +56,9 @@
     <link rel="stylesheet" href="style/series.css">
     <link rel="stylesheet" href="style/photo.css">
 
+    <!-- JavaScript -->
     <script src="https://kit.fontawesome.com/5d9879d3e5.js"></script>
-
+    <script src="random.js"></script>
 </head>
 
 <body>
@@ -117,11 +113,16 @@
                         <li>
                             <input id="menu_check2" class="menu-check" type="checkbox">
                             <label class="menu" for="menu_check2">
-                                <div class="menu-title">EVENTS</div>
+                                <div class="menu-title">EVENTS <i class="fas fa-exclamation-circle"></i></div>
                             </label>
                             <div class="menu-contents">
                                 <!--COMITIA129情報-->
                                 <h2>COMITIA129</h2>
+                                <section>
+                                    <h3>After report</h3>
+                                    弊社のサークル参加の流れについてご報告いたします。<br>
+                                    <a href="JavaScript:myRndLink();"><i class="fas fa-external-link-alt"></i>アフターレポートへのリンクはこちら</a>
+                                </section>
                                 <section>
                                     <h3>Outline</h3>
                                     <table class="spec">
@@ -342,7 +343,7 @@
                             <input id="menu_check4" class="menu-check" type="checkbox">
                             <label class="menu" for="menu_check4">
                                 <div class="menu-title">
-                                    PHOTOS <i class="fas fa-exclamation-circle"></i>
+                                    PHOTOS
                                 </div>
                             </label>
                             <div class="menu-contents">
