@@ -1,4 +1,5 @@
 /*--VARIABLE--*/
+/*for PC*/
 :root{
     --HEJIspacing:78em;
     --HONDAspacing:calc(var(--HEJIspacing) + 15em);
@@ -6,6 +7,7 @@
     --SERIESbackground:calc(var(--HEJIspacing) + 32em);
 }
 
+/*for Smart phone*/
 _::-webkit-full-page-media, _:future, :root{
     --HEJIspacing:73em;
 }
