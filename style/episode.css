@@ -13,3 +13,58 @@
 .pages li img{
     width:100%;
 }
+.pages li:last-child{
+    margin-bottom:0;
+}
+
+.next-wrapper {
+    padding:0;
+    margin:1em 0 2em;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition:0.2s;
+}
+
+.next-wrapper a{
+    text-decoration:none;
+}
+.next-heji{
+    padding:1em 0;
+    color: var(--CARDcolor); 
+    background-color: var(--HEJIcolor);
+}
+
+.next-heji:hover{
+    -webkit-animation: heji-next-fade 0.5s 1;
+    -moz-animation: heji-next-fade 0.5s 1;
+}
+
+@-webkit-keyframes heji-next-fade {
+    0% { 
+        color: var(--TEXTcolor);
+        background-color:var(--CARDcolor);
+    }
+    
+    100% { 
+        background-color: var(--HEJIcolor);
+        color: var(--CARDcolor); 
+    }
+}
+@-moz-keyframes heji-next-fade {
+    0% { 
+        color: var(--TEXTcolor);
+        background-color:var(--CARDcolor);
+    }
+    
+    100% { 
+        background-color: var(--HEJIcolor);
+        color: var(--CARDcolor); 
+    }
+}
+
+.next-inprogress{
+    padding:1em 0;
+    color: var(--TEXTcolor); 
+    background-color: var(--BACKGROUND-shadow);
+}
