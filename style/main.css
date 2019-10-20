@@ -121,6 +121,16 @@ a:hover{
     animation: fadeIn 2s ease 0s 1 normal;
 }
 
+#whitecard-episode{
+    max-width: 640px;
+    padding: 2em 2em;
+    margin:1em auto 2em;
+    background: var(--CARDcolor);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+
 @media (max-width:740px){
     #whitecard-wrapper{
         position:absolute;
@@ -129,8 +139,13 @@ a:hover{
         right:0;
         padding:1em 0.5em;
     }
-    
     #whitecard{
+        max-width: 640px;
+        padding: 2em 2em 4em;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    }
+    
+    #whitecard-episode{
         max-width: 640px;
         padding: 1em 0.5em 4em;
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
