@@ -2,23 +2,28 @@
     padding:0;
     margin:0;
     width:100%;
+    text-align: center;
     list-style: none;
 }
 
 .pages li{
     width:100%;
     margin-bottom:3em;
+    
 }
 
 .pages li img{
     width:100%;
+    max-width:640px;
 }
 .pages li:last-child{
     margin-bottom:0;
 }
 
+
+
 .next-wrapper {
-    padding:0;
+    padding:auto;
     margin:1em 0 2em;
     text-align: center;
     font-size: 1.2em;
@@ -67,4 +72,16 @@
     padding:1em 0;
     color: var(--TEXTcolor); 
     background-color: var(--BACKGROUND-shadow);
+}
+
+
+.pages .page2 img{
+    width:100%;
+    max-width:initial;
+    max-width: auto;
+}
+
+.episode-info-wrapper {
+    margin:0 auto;
+    max-width: 640px;
 }
