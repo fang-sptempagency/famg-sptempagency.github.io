@@ -126,7 +126,7 @@ a:hover{
     padding: 2em 2em;
     margin:1em auto 2em;
     background: var(--CARDcolor);
-    
+    align-items: center;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
     animation: fadeIn 2s ease 0s 1 normal;
 }
