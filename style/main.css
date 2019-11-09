@@ -314,6 +314,6 @@ figcaption{
   display: inline-block;
   height: 1em;
   font-size: inherit;
-  vertical-align: -.125em;
+  vertical-align: -.15em;
   fill: currentColor
 }
