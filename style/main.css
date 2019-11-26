@@ -22,9 +22,9 @@ body {
     font-family: "Helvetica Neue", ヒラギノ角ゴ, Helvetica, Arial, sans-serif;
     margin:0;
     padding:0;
-    
+
     height:100%;
-    
+
     font-size: 14px;
     line-height: 1.5;
     color: var(--TEXTcolor);
