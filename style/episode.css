@@ -85,3 +85,8 @@
     margin:0 auto;
     max-width: 640px;
 }
+
+#revealColor {
+    border-left: solid 4px;
+    border-left-color: var(--HONDAcolor);
+}

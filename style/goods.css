@@ -40,6 +40,8 @@
 .spec th {
     padding: 0 1em;
     text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
 }
 
 .spec td {}
