@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="style/series.css?20191026-2">
     <link rel="stylesheet" href="style/photo.css?20190917">
 
-    <!-- SVG icons -->
+    <!-- JavaScript -->
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="exclamation-circle" class="svg-inline--fa fa-exclamation-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <defs>
         <symbol id="inline-new">
@@ -55,31 +55,6 @@
             </defs>
     </svg>
     
-    <!-- JavaScript -->
-    <script src="script/js.cookie.js"></script>
-
-    <script>
-
-        function revealColor(){
-            var keys = Cookies.get('record');
-            if(keys == 'true'){
-                document.documentElement.style.setProperty('--HONDAcolor','#e60000');
-            }
-        }
-        function saveCookie(){
-            Cookies.set('record', 'true')
-        }
-
-        function readCookie(){
-            const cookie = Cookies.get('record');
-            console.log(cookie); 
-        }
-        
-        window.onload = function(){
-            revealColor();
-        }
-        
-    </script>
 </head>
 
 <body>
@@ -104,13 +79,20 @@
                 </nav>
             </header>
             <main>
+                <div class="notice">
+                    <h4>お知らせ（2019.11.30）</h4>
+                    <ul>
+                        <li><a href="https://fang.booth.pm/items/1344924">「FANG: 戸次信長編 vol. 1」の頒布を再開しました。</a></li>
+                        <li>「FANG: 戸次信長編 vol. 2」製作に伴い、エピソードの更新を休止します。</li>
+                    </ul>
+                </div>
                 <nav>
                     <ul id="menu">
                         <!--About-->
                         <li>
                             <input id="about_check" class="menu-check" type="checkbox">
                             <label class="menu" for="about_check">
-                                <div class="menu-title" onclick="revealColor()">
+                                <div class="menu-title">
                                     ABOUT
                                 </div>
                             </label>
@@ -123,104 +105,12 @@
                                 <svg class="svg-inline" viewBox="0 0 512 512" role="img"><use xlink:href="#inline-external-link"></use></svg> <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3CoZlilOr9hOpysHlzVtORcKBzVj2hknSlO455XTHyPUf-w/viewform" target="_blank">お問い合わせはこちら</a>
                             </div>
                         </li>
-
-                        <!--GOODS-->
-                        <li>
-                            <input id="goods_check" class="menu-check" type="checkbox">
-                            <label class="menu" for="goods_check">
-                                <div class="menu-title">GOODS <svg class="svg-inline" viewBox="0 0 512 512" role="img"><use xlink:href="#inline-new"></use></svg></div>
-                            </label>
-                            <div class="menu-contents">
-                                <section>
-                                    <div class="goods">
-                                        <div class="goods-img">
-                                            <figure>
-                                                <img alt="FANG:戸次信長編vol2" src="img/heji-vol2-cover.png" />
-                                                <figcaption>
-                                                    <div class="date">2020.03.15</div>
-                                                    <div class="caption">他の奴には不可視な裏口、秘密に踏みこむ第2巻</div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <div class="goods-caption">
-                                            <h3>FANG: 戸次信長編 vol. 2</h3>
-                                            <span class="price">800円（送料別）</span>
-                                            <table class="spec">
-                                                <tr>
-                                                    <th>サイズ</th>
-                                                    <td>B5</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>ページ数</th>
-                                                    <td>68P</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>本文</th>
-                                                    <td>カラー・モノクロ混合<br>
-                                                </tr>
-                                                <tr>
-                                                    <th>収録回</th>
-                                                    <td>#3 DON'T ENTER da TERRITORY</td>
-                                                </tr>
-                                            </table>
-                                            <a class="button" href="https://fang.booth.pm/items/1873453"><button>BOOTHで購入</button></a>
-
-                                        </div>
-                                    </div>
-                                </section>
-                                <br>
-                                <br>
-                                <section>
-                                    <div class="goods">
-                                        <div class="goods-img">
-                                            <figure>
-                                                <img alt="FANG:戸次信長編vol1" src="img/heji-vol1-cover.png" />
-                                                <figcaption>
-                                                    <div class="date">2019.05.25</div>
-                                                    <div class="caption">背中合わせの戸次と篠原が表紙、記念すべき第1巻</div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <div class="goods-caption">
-                                            <h3>FANG: 戸次信長編 vol. 1</h3>
-                                            <span class="price">800円（送料別）</span>
-                                            <table class="spec">
-                                                <tr>
-                                                    <th>サイズ</th>
-                                                    <td>B5</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>ページ数</th>
-                                                    <td>60P</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>本文</th>
-                                                    <td>カラー・モノクロ混合</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>収録回</th>
-                                                    <td>#1 OPEN da DOOR<br>
-                                                        #2 Big Dog's Digging LIFE</td>
-                                                </tr>
-                                            </table>
-                                            <a class="button" href="https://fang.booth.pm/items/1344924"><button>BOOTHで購入</button></a>
-
-                                        </div>
-                                    </div>
-                                    <div class="notice">
-                                        <h4>初版乱丁のお詫び</h4>
-                                        手配ミスにより、初版巻末に白紙ページが6頁挿入されていることがわかりました。お手に取ってくださった方々に大変ご迷惑をおかけしましたことを、深くお詫び申し上げます。<br>
-                                        第2巻の頒布が決定次第、本巻の第2版も併せて頒布いたします。今後第2版との交換をご希望される方は、<a href="https://fang.booth.pm/" target="_blank"><i class="fas fa-external-link-alt"></i>BOOTHの弊社ショップ</a>からご連絡いただきますようお願いいたします。お手数をおかけして大変申し訳ありません。今後このようなことがないよう、十分注意してまいります。どうか今後とも変わらぬお引き立てのほどよろしくお願い申し上げます。
-                                    </div>
-                                </section>
-                            </div>
-                        </li>
-
+                                              
                         <!--Episode-->
                         <li>
                             <input id="episode_check" class="menu-check" type="checkbox">
                             <label class="menu" for="episode_check">
-                                <div class="menu-title">SERIES</div>
+                                <div class="menu-title">SERIES <svg class="svg-inline" viewBox="0 0 512 512" role="img"><use xlink:href="#inline-new"></use></svg></div>
                             </label>
                             <div class="menu-contents">
                                 <div class="series-wrapper">
@@ -327,8 +217,8 @@
                                             <div class="series-title">本田千和</div>
                                             <ul>
                                                 <li class="null"></li>
-                                                   <li class="episode">
-                                                       <a href="episode/honda/honda1.html" onclick=saveCookie();>
+                                                <li class="episode">
+                                                    <a href="episode/honda/honda1.html">
                                                         <div class="episode-title-wrapper">
                                                             <div class="no">#1</div>
                                                             <div class="title">進路</div>
@@ -480,7 +370,56 @@
                                 </ul>
                             </div>
                         </li>
+                        
+                        <!--GOODS-->
+                        <li>
+                            <input id="goods_check" class="menu-check" type="checkbox">
+                            <label class="menu" for="goods_check">
+                                <div class="menu-title">GOODS</div>
+                            </label>
+                            <div class="menu-contents">
+                                <section>
+                                    <div class="goods">
+                                        <div class="goods-img">
+                                            <figure>
+                                                <img alt="FANG:戸次信長編vol1" src="img/heji-vol1-cover.png" />
+                                                <figcaption>
+                                                    <div class="date">2019.05.25</div>
+                                                    <div class="caption">背中合わせの戸次と篠原が表紙、記念すべき第1巻</div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="goods-caption">
+                                            <h3>FANG: 戸次信長編 vol. 1</h3>
+                                            <span class="price">800円（送料別）</span>
+                                            <p>戸次信長編#1と#2をWeb再録した同人誌です。原稿は一部修正をしています。</p>
+                                            <table class="spec">
+                                                <tr>
+                                                    <th>サイズ</th>
+                                                    <td>B5</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>ページ数</th>
+                                                    <td>60P</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>本文</th>
+                                                    <td>カラー・モノクロ混合</td>
+                                                </tr>
+                                            </table>
+                                            <a class="button" href="https://fang.booth.pm/items/1344924"><button>BOOTHで購入</button></a>
 
+                                        </div>
+                                    </div>
+                                    <div class="notice">
+                                        <h4>初版乱丁のお詫び</h4>
+                                        手配ミスにより、初版巻末に白紙ページが6頁挿入されていることがわかりました。お手に取ってくださった方々に大変ご迷惑をおかけしましたことを、深くお詫び申し上げます。<br>
+                                        第2巻の頒布が決定次第、本巻の第2版も併せて頒布いたします。今後第2版との交換をご希望される方は、<a href="https://fang.booth.pm/" target="_blank"><i class="fas fa-external-link-alt"></i>BOOTHの弊社ショップ</a>からご連絡いただきますようお願いいたします。お手数をおかけして大変申し訳ありません。今後このようなことがないよう、十分注意してまいります。どうか今後とも変わらぬお引き立てのほどよろしくお願い申し上げます。
+                                    </div>
+                                </section>
+                            </div>
+                        </li>
+                  
                         <!--EVENT-->
                         <li>
                             <input id="event_check" class="menu-check" type="checkbox">
