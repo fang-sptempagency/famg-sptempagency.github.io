@@ -31,9 +31,16 @@
 }
 
 /*--GOODS INFORMATION--*/
-.spec {
-    margin: 0.5em 0 1em 0;
+
+table.spec {
+  margin: 0.5em 0 1em 0;
+  width: 100%;
 }
+
+table.spec th{
+    width:4em;
+}
+
 
 .spec tr {}
 
