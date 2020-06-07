@@ -70,6 +70,18 @@
             Cookies.set('record', 'true', {expires: 730})
         }
 
+        function revealSHADOW(){
+            var keys = Cookies.get('shadow');
+            if(keys == 'true'){
+                document.documentElement.style.setProperty('--BACKGROUND-shadow','#8e9eab');
+                document.documentElement.style.setProperty('--BACKGROUND-light','#eef2f3');
+                document.documentElement.style.setProperty('--highlight','#eef2f3');
+            }
+        }
+        function saveCookieSHADOW(){
+            Cookies.set('shadow', 'true', {expires: 730})
+        }
+        
         function readCookie(){
             const cookie = Cookies.get('record');
             console.log(cookie); 
@@ -77,6 +89,7 @@
         
         window.onload = function(){
             revealColor();
+            revealSHADOW();
         }
         
     </script>
@@ -138,6 +151,22 @@
                                         <div class="heji-series-contents">
                                             <div class="series-title">戸次信長</div>
                                             <ul>
+                                                <li class="episode">
+                                                    <a href="episode/heji/heji5.html" onclick=saveCookieSHADOW();>
+                                                        <div class="episode-title-wrapper">
+                                                            <div class="no">#5</div>
+                                                            <div class="title">
+                                                                da DOOR is <br>
+                                                                about to OPEN</div>
+                                                        </div>
+                                                        <div class="lyric">
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                            <br>
+                                                        </div>
+                                                    </a>
+                                                </li>
                                                 <li class="episode">
                                                     <a href="episode/heji/heji4.html">
                                                         <div class="episode-title-wrapper">
