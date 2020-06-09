@@ -9,7 +9,7 @@
 
 /*for Smart phone*/
 _::-webkit-full-page-media, _:future, :root{
-    --HEJIspacing:122em;
+    --HEJIspacing:121em; /*16em*/
 }
 
 /*--SERIES--*/
