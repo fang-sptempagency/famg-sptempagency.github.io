@@ -95,7 +95,7 @@
                     </div>
                     <div class="episode-info-wrapper">
                         <div class="notice">
-                            2020.08.10　FANG公式サイト 初版掲載<br>
+                            2020.08.10　FANG公式サイト、Pixiv、PictBLand 初版掲載<br>
                         </div>
                     </div>
                 </section>
@@ -111,23 +111,6 @@
                 lazyload();
             }, 1000);
         });
-        
-        function changeBG() {
-            
-            document.documentElement.style.setProperty('--BACKGROUND-shadow','#8e9eab');
-            document.documentElement.style.setProperty('--BACKGROUND-light','#eef2f3');
-            document.documentElement.style.setProperty('--highlight','#eef2f3');
-        }
-        
-        jQuery(window).scroll(function() {
-            let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
-            let areaTop = jQuery("#revealBGshadow").offset().top; // 対象エリアの上部の位置
-
-            if (scrollTop+400 > areaTop) {
-                changeBG();
-            }
-        });
-
     </script>
 </body>
 </html>
