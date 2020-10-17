@@ -3,12 +3,12 @@
     --HEJIcolor:rgba(250,128,0,1);
     --HONDAcolor:rgba(136,136,136,1); /*不明*/
     
-    --BACKGROUND-shadow:#8e9eab;
-    --BACKGROUND-light:#eef2f3;
-    --highlight:#eef2f3;
-
-    --TEXTcolor:black;
-    --CARDcolor:white;
+    --BACKGROUND-shadow:rgba(238,242,243,1);
+    --BACKGROUND-light:rgba(252,252,252,1);
+    --highlight:rgba(238,242,243,1);
+    
+    --TEXTcolor:rgba(0,0,0,1);
+    --CARDcolor:rgba(255,255,255,1);
 }
 
 html {
