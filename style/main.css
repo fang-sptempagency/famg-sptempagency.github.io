@@ -155,7 +155,7 @@ header {
 }
 header #rogo {
     width: 55%;
-    margin:4em auto 5em;
+    margin:4em auto 2em;
     text-align:center;
 }
 
@@ -234,8 +234,8 @@ header #rogo a:hover{
 /*--FOOTER--*/
 footer {
     width:100%;
-    padding-top:4em;
-    margin: 0 auto;
+    padding:4em;
+    margin: 0 auto ;
     max-width: 360px;
     text-align: center;
     font-size:0.8em;
