@@ -1,0 +1,451 @@
+/*--VARIABLE--*/
+:root {
+    --HEJIcolor: rgba(250, 128, 0, 1);
+    --HONDAcolor: rgba(230, 0, 0, 1);
+
+    --BACKGROUND-shadow: rgba(238, 242, 243, 1);
+    --BACKGROUND-light: rgba(252, 252, 252, 1);
+    --highlight: rgba(238, 242, 243, 1);
+
+    --TEXTcolor: rgba(255, 255, 255, 1);
+    --CARDcolor: rgba(255, 255, 255, 1);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: "Helvetica Neue", ヒラギノ角ゴ, Helvetica, Arial, sans-serif;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--TEXTcolor);
+    -webkit-text-size-adjust: 100%;
+    background-color: black;
+}
+
+#index {
+    height: 100vh;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+    font-style: bold;
+}
+
+a {
+    text-decoration: none;
+    color: var(--TEXTcolor);
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--TEXTcolor);
+    -webkit-animation: hover-highlight 0.5s 1;
+    -moz-animation: hover-highlight 0.5s 1;
+    text-decoration: none;
+}
+
+@-webkit-keyframes hover-highlight {
+    0% {
+        color: var(--BACKGROUND-shadow);
+        background-color: var(--highlight);
+    }
+
+    100% {
+        color: var(--TEXTcolor);
+        background-color: var(--BACKGROUND-shadow);
+    }
+}
+
+@-moz-keyframes hover-highlight {
+    0% {
+        color: var(--BACKGROUND-shadow);
+        background-color: var(--highlight);
+    }
+
+    100% {
+        color: var(--TEXTcolor);
+        background-color: var(--BACKGROUND-shadow);
+    }
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0.5em auto;
+}
+
+table th,
+table td {
+    border: solid 1px black;
+    padding: 0.5em 1em;
+}
+
+table th {
+    white-space: nowrap;
+}
+
+/*--CONTENTS BACKGROUND--*/
+#whitecard-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 3em auto;
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+
+#wrapper img {
+    max-width: 100%
+}
+
+@media (max-width:740px) {
+    .whitecard-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 1em 0.5em;
+    }
+
+    .whitecard {
+        max-width: 640px;
+        padding: 2em 2em 4em;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+article {
+    margin: 5em 0 0;
+}
+
+section {
+    margin: 2em 1em;
+}
+
+aside {
+    font-size: 0.8em;
+}
+
+.aside-li {
+    padding-left: 2em;
+}
+
+p {
+    margin-left: 1em
+}
+
+canvas {
+    width: 100%;
+}
+
+/*--HEADER--*/
+
+#HEADER {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    padding: 0;
+    position: relative;
+/*    height: 200vh;*/
+    z-index: -10;
+}
+
+.header img {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -800px;
+    max-height: 100vh;
+}
+
+@media screen and (min-width:940px) {
+    .header img {
+        top: 0;
+        left: auto;
+        right:0;
+        margin:0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width:1280px){
+    .header img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        max-height:initial;
+        width:100vw;
+    }
+}
+
+.fadein {
+    position: relative;
+    top:0;
+    opacity: 0;
+    height: 300vh;
+    background-color:var(--HONDAcolor);
+    mix-blend-mode: color-burn;
+    z-index: -1;
+}
+
+.on {
+    opacity: 1;
+}
+
+#LOGO {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#LOGO svg {
+    fill: var(--highlight);
+    width: 70vw;
+    max-width: 800px;
+}
+
+/*--MAIN MENU--*/
+#menu nav ul {
+    list-style: none;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.onlyPC {}
+
+@media (max-width:1100px) {
+    .onlyPC {
+        display: none;
+    }
+}
+
+/*--FOOTER--*/
+footer {
+    text-align: right;
+    font-size: 0.7em;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 8em;
+    background-color: black;
+}
+
+.svg-inline {
+    display: inline-block;
+    height: 1em;
+    font-size: inherit;
+    vertical-align: -.15em;
+    fill: currentColor
+}
+
+
+.highlight {
+    font-size: 5em;
+    color: var(--HEJIcolor);
+    font-weight: bold;
+    line-height: 1;
+}
+
+.highlight-sub {
+    font-size: 3em;
+}
+
+.highlight-header {
+    font-size: 1.5em;
+}
+
+#CONTENTS {
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+}
+
+#CONTENTS section {
+    width: 100%;
+    margin: 0.5em 0 1em;
+    padding: 1em;
+    font-size: 0.5em;
+    border: 1px solid;
+    border-radius: 0.3em;
+    text-align: center;
+}
+
+#CONTENTS section:hover {
+    -webkit-animation: hover-highlight 0.5s 1;
+    -moz-animation: hover-highlight 0.5s 1;
+}
+
+#CONTENTS p {
+    padding: 0;
+    margin: 0;
+}
+
+#CONTENTS h1 {
+    margin-bottom: 0.5em;
+    font-size: min(15vw, 8em);
+}
+
+#CONTENTS h2 {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#CONTENTS h3 {
+    font-size: 2.2em;
+}
+
+#SERIES {
+    max-width: 100%;
+}
+
+#SERIES section {
+    max-width: 640px;
+    margin: 2em auto;
+}
+
+#SERIES article {
+    margin: 0;
+    padding: 3em 2em 2em 2em;
+}
+
+#SERIES article h1 {
+    font-weight: bolder;
+}
+
+.fixed-bg {
+    min-height: 100vh;
+
+    margin: 0em auto;
+    background-attachment: fixed;
+    background-position: center;
+
+    width: 100%;
+
+    background-size: contain;
+    -webkit-background-size: contain;
+
+    background-repeat: no-repeat;
+}
+
+.heji-bg {
+    background-image: url("../img/top-heji.png");
+    background-color: var(--HEJIcolor);
+    background-position: left;
+    background-size: 120vh;
+}
+
+.honda-bg {
+    background-image: url("../img/top-honda.png");
+    background-color: var(--HONDAcolor);
+    background-position: right;
+    background-size: 110vh;
+}
+
+@media screen and (max-width:1000px) {
+    .heji-bg {
+        background-position: center;
+        background-size: 120vh;
+    }
+
+    .honda-bg {
+        background-position: center;
+        background-size: 110vh;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .heji-bg {
+        background-image: none;
+    }
+
+    .honda-bg {
+        background-image: none;
+    }
+}
+
+.fang-bg {
+    background-color: black;
+}
+
+#REPORTS {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}

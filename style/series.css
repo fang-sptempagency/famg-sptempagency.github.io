@@ -1,0 +1,97 @@
+
+/*--SERIES--*/
+
+/*--SERIES TITLE--*/
+
+
+/*--EPISODE--*/
+#SERIES #HEJI section{
+    border-color:var(--HEJIcolor);
+    border-width: 1px;
+}
+
+#SERIES #HEJI section:hover{
+    -webkit-animation: hover-highlight-HEJI 0.5s 1;
+    -moz-animation: hover-highlight-HEJI 0.5s 1;
+}
+
+@-webkit-keyframes hover-highlight-HEJI {
+    0% {
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--HEJIcolor);
+    }
+    100% { 
+        color: var(--TEXTcolor);
+        background-color:var(--BACKGROUNDcolor); }
+}
+@-moz-keyframes hover-highlight {
+    0% {
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--HEJIcolor);
+    }
+    100% { 
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--HEJIcolor); }
+}
+
+#SERIES #HONDA section{
+    border-color:var(--HONDAcolor);
+    border-width: 1px;
+}
+
+#SERIES #HONDA section:hover{
+    -webkit-animation: hover-highlight-HONDA 0.5s 1;
+    -moz-animation: hover-highlight-HONDA 0.5s 1;
+}
+
+@-webkit-keyframes hover-highlight-HONDA {
+    0% {
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--HONDAcolor);
+    }
+    100% { 
+        color: var(--TEXTcolor);
+        background-color:var(--BACKGROUNDcolor); }
+}
+@-moz-keyframes hover-highlight-HONDA {
+    0% {
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--HONDAcolor);
+    }
+    100% { 
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--HONDAcolor); }
+}
+
+#SERIES #FANG section{
+    border-color:var(--TEXTcolor);
+}
+
+#SERIES #FANG section:hover{
+    -webkit-animation: hover-highlight 0.5s 1;
+    -moz-animation: hover-highlight 0.5s 1;
+}
+
+@-webkit-keyframes hover-highlight {
+    0% {
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--highlight);
+    }
+    100% { 
+        color: var(--TEXTcolor);
+        background-color:var(--BACKGROUNDcolor); }
+}
+
+@-moz-keyframes hover-highlight {
+    0% {
+        color:var(--BACKGROUND-shadow);
+        background-color:var(--highlight);
+    }
+    100% { 
+        color:var(--TEXTcolor);
+        background-color:var(--BACKGROUNDcolor); }
+}
+
+
+
+

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- ServiceWorker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then((reg) => {
+                    if (reg.installing) {
+                        console.log('Service Worker をインストール中です');
+                    } else if (reg.waiting) {
+                        console.log('Service Worker をインストールしました');
+                    } else if (reg.active) {
+                        console.log('Service Worker は有効です');
+                    }
+                })
+                .catch((error) => {
+                    // registration failed
+                    console.log('登録失敗：', error);
+                });
+        }
+
+    </script>
+
+    <!-- Info -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FANG | PHOTOS</title>
+    <meta name="description" content="特殊人材派遣会社FANG 優秀なスタッフがお客様のビジネスをお手伝いします。">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">　
+
+    <link rel=”icon” type=”image/png” sizes=”192×192″ href=”favicon/android-chrome-192x192.png”>
+    <meta name=”theme-color” content=”#000″>
+
+    <meta name=”msapplication-config” content=”browserconfig.xml”>
+    <meta name=”msapplication-TileColor” content=”#ffffff”>
+    <meta name=”msapplication-TileImage” content=”favicon/mstile-144×144.png”>
+    <link rel=”mask-icon” href=”favicon/favicon.svg” color=”#000″>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="FANG">
+    <link rel="apple-touch-icon" href="favicon/android-chrome-192x192.png">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="特殊人材派遣会社FANG">
+    <meta itemprop="description" content="特殊人材派遣会社FANG 優秀なスタッフがお客様のビジネスをお手伝いします。">
+    <meta itemprop="image" content="https://fang-sptempagency.web.app/img/FANG-icon.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://fang-sptempagency.web.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="特殊人材派遣会社FANG">
+    <meta property="og:description" content="特殊人材派遣会社FANG 優秀なスタッフがお客様のビジネスをお手伝いします。">
+    <meta property="og:image" content="https://fang-sptempagency.web.app/img/FANG-icon.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="特殊人材派遣会社FANG">
+    <meta name="twitter:description" content="特殊人材派遣会社FANG 優秀なスタッフがお客様のビジネスをお手伝いします。">
+    <meta name="twitter:image" content="https://fang-sptempagency.web.app/img/FANG-icon.png">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/photos.css?20190917">
+
+    <!-- SVG icons -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper-photos">
+        <article>
+            <figure>
+                <img alt="2022.05.14" src="img/20220514-heji.png" />
+            </figure>
+            <figcaption>2022.05.14</figcaption>
+        </article>
+        
+        <article>
+            <figure>
+                <img alt="2022.05.03" src="img/20220503-heji.png" />
+            </figure>
+            <figcaption>2022.05.03</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2021.08.22" src="img/20210822-heji.png" />
+            </figure>
+            <figcaption>2021.08.22</figcaption>
+        </article>
+
+        <article style = 'display: none'>
+            <figure>
+                <img alt="2021.08.13" src="img/20210813-hejishino.png" />
+            </figure>
+            <figcaption>2021.08.13 Est.5hours30min</figcaption>
+        </article>
+
+        <article style = 'display: none'>
+            <figure>
+                <img alt="2021.07.18" src="img/20210718-hejishino.png" />
+            </figure>
+            <figcaption>2021.07.18 Est.1hour30min</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2021.05.16" src="img/20210516-chikazu.png" />
+            </figure>
+            <figcaption>2021.05.16</figcaption>
+        </article>
+        
+        <article>
+            <figure>
+                <img alt="2021.04.16" src="img/20210416-heji.png" />
+            </figure>
+            <figcaption>2021.04.16</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2021.04.11" src="img/20210411-shinohara.png" />
+            </figure>
+            <figcaption>2021.04.11</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2020.02.26" src="img/20210226-chikazu.png" />
+            </figure>
+            <figcaption>2021.02.26</figcaption>
+        </article>
+       
+        <article>
+            <figure>
+                <img alt="2020.09.12" src="img/20210223-chikazu.png" />
+            </figure>
+            <figcaption>2021.02.23 Est.2hours</figcaption>
+        </article>
+       
+        <article>
+            <figure>
+                <img alt="2021.01.11" src="img/20210111-heji.png" />
+            </figure>
+            <figcaption>2021.01.11</figcaption>
+        </article>
+        
+        <article>
+            <figure>
+                <img alt="2020.12.19" src="img/20201219-heji.png" />
+            </figure>
+            <figcaption>2020.12.19</figcaption>
+        </article>
+
+        <!--<article>
+            <figure>
+                <img alt="2020.12.08" src="img/20201209-ken.png" />
+            </figure>
+            <figcaption>2020.12.08 1hour31mins</figcaption>
+        </article>-->
+        
+        <article>
+            <figure>
+                <img alt="2020.09.30" src="img/20200930-chikazu-ken.png" />
+            </figure>
+            <figcaption>2020.09.30 Est.2hours</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2020.09.12" src="img/20200912-chikazu-ken.png" />
+            </figure>
+            <figcaption class="onlyPC">2020.09.12 Est.2hours30min</figcaption>
+        </article>
+
+        <article class="onlyPC">
+            <figure>
+            <img alt="2020.09.12" src="img/20200912-heji.png" />
+            </figure>
+            <figcaption class="onlyPC">2020.09.12 Est.2hours30min</figcaption>
+        </article>
+
+        <article>
+            <figure>
+            <img alt="2020.05.04" src="img/20200504-heji.png" />
+            </figure>
+            <figcaption>2020.05.04</figcaption>
+        </article>
+
+               <article>
+            <figure class="onlyPC">
+                <img alt="2020.03.30" src="img/20200330-heji-ken.png" />
+            </figure>
+            <figcaption class="onlyPC">2020.03.30 Est.1hours30min</figcaption>
+        </article>
+       
+        <article>
+            <figure>
+                <img alt="2020.02.08" src="img/20200208-heji.png" />
+            </figure>
+            <figcaption>2020.02.08</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2020.01.26" src="img/20200126-chikazu.png" style="background-image: linear-gradient(to top, #d7d2cc 0%, #304352 100%);" />
+            </figure>
+            <figcaption>2020.01.26</figcaption>
+        </article>
+
+        <article>
+            <figure>
+            <img alt="2019.12.27" src="img/20191227-heji.png" style="background-color:#2196F3" />
+            </figure>
+            <figcaption>2019.12.27</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2019.11.25" src="img/20191125-heji.png" style="background-color:#FA8000" />
+            </figure>
+            <figcaption>2019.11.25</figcaption>
+        </article>
+
+
+        <article>
+            <figure>
+                <img alt="2019.9.23" src="img/20190923-chikazu.png" style="background-color:#FF6BB5" />
+            </figure>
+            <figcaption>2019.09.23</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2019.8.29" src="img/20190829-chikazu.png" />
+            </figure>
+            <figcaption>2019.08.29</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2019.8.17" src="img/20190817-heji.png" style="background-color:#25FFA6" />
+            </figure>
+            <figcaption>2019.08.17</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2019.8.3" src="img/20190803-heji.png" />
+            </figure>
+            <figcaption>2019.08.03</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2019.7.30" src="img/20190730-chikazu.png" style="background-color:#1C99FF" />
+            </figure>
+            <figcaption>2019.07.30</figcaption>
+        </article>
+
+        <article>
+            <figure>
+                <img alt="2019.7.30" src="img/20190730-hejichika.png" />
+            </figure>
+            <figcaption>2019.07.30</figcaption>
+        </article>
+    </div>
+</body>
