@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/photo')
+def photo():
+    return render_template('photo.html')
+
 @app.route('/report')
 def report():
     return render_template('report.html')
