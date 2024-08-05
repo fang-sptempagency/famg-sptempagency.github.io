@@ -10,9 +10,9 @@ def index():
 def episode():
     return render_template('episode.html')
 
-@app.route('/photo')
-def photo():
-    return render_template('photo.html')
+@app.route('/photos')
+def photos():
+    return render_template('photos.html')
 
 @app.route('/report')
 def report():
