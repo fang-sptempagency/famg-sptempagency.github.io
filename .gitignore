@@ -4,3 +4,4 @@ firebase.json
 public/*
 hosting.*
 .venv/*
+*.pyc
