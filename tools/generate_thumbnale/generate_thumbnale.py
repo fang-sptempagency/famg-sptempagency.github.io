@@ -3,7 +3,9 @@ from pathlib import Path
 import os
 
 # 元画像が入ったディレクトリ
-p = Path('tools/generate_thumbnale/input/')
+INPUT_PATH='static/photos'
+OUTPUT_PATH='static/photos/thumbnail'
+p = Path(INPUT_PATH)
 src_img_list = list(p.glob('*.png'))
 
 # トリミングのサイズ(ピクセル)
@@ -32,5 +34,5 @@ for i, src_img in enumerate(src_img_list):
     img_crop = crop_thumbnail(src_img)
 
     # トリミングした画像を保存
-    img_crop.save('tools/generate_thumbnale/output/' + src_img.name, 'PNG', quality=100, optimize=True)
+    img_crop.save(os.path.join(OUTPUT_PATH, src_img.name), 'PNG', quality=100, optimize=True)
 
