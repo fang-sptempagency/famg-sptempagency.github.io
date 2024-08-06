@@ -18,6 +18,10 @@ def episode():
 def photos():
     return render_template('photos.html')
 
+@app.route('/photos/photo')
+def photo():
+    return render_template('photo.html')
+
 @app.route('/report')
 def report():
     return render_template('report.html')
