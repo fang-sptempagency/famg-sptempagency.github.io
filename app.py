@@ -33,17 +33,11 @@ def photos():
     return render_template('photos.html', photo_list=photo_list)
 
 # TODO POSTメソッドでphotoのidを受け渡す
-# TODO 写真は時間順で並べてから、隣接するレコードを検索する
 # TODO データベースとの連携
-@app.route('/photos/<int:id>', methods=['GET','POST'])
+@app.route('/photos/<int:id>')
 def photo(id):
-    if request.method=='GET':
-        photo=photo_list[id]
-        return render_template('photo.html', photo=photo)
-    else:
-        print(request.form.get('value'))
-        return render_template('photo.html', photo=photo)
-
+    photo=photo_list[id]
+    return render_template('photo.html', photo=photo)
 
 @app.route('/report')
 def report():
