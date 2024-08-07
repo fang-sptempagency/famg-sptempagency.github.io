@@ -8,9 +8,6 @@ OUTPUT_PATH='static/photos/thumbnail'
 p = Path(INPUT_PATH)
 src_img_list = list(p.glob('*.png'))
 
-# トリミングのサイズ(ピクセル)
-new_size = 400
-
 def crop_thumbnail(src_img:str)->ImageFile:
     # 画像読み込み
     img = Image.open(src_img)
@@ -25,7 +22,8 @@ def crop_thumbnail(src_img:str)->ImageFile:
         new_size = img.width
 
     # トリミング
-    return img.crop((center_x - new_size / 2, center_y - new_size / 2, center_x + new_size / 2, center_y + new_size / 2))
+    _crop_img = img.crop((center_x - new_size / 2, center_y - new_size / 2, center_x + new_size / 2, center_y + new_size / 2))
+    return _crop_img.resize((400, 400)) 
 
 
 for i, src_img in enumerate(src_img_list):
