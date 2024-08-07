@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from collections import namedtuple
 from datetime import date
 app = Flask(__name__, static_folder='./static')
@@ -35,9 +35,15 @@ def photos():
 # TODO POSTメソッドでphotoのidを受け渡す
 # TODO 写真は時間順で並べてから、隣接するレコードを検索する
 # TODO データベースとの連携
-@app.route('/photos/photo')
-def photo():
-    return render_template('photo.html')
+@app.route('/photos/<int:id>', methods=['GET','POST'])
+def photo(id):
+    if request.method=='GET':
+        photo=photo_list[id]
+        return render_template('photo.html', photo=photo)
+    else:
+        print(request.form.get('value'))
+        return render_template('photo.html', photo=photo)
+
 
 @app.route('/report')
 def report():

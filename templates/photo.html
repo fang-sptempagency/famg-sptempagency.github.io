@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% block body %}
-<img alt="First view" src="/static/photos/20210813-hejishino.png">
+
+<img src="../{{ photo.path }}">
 <section>
-    2021/08/13
+    {{ photo.date }}
 </section>
-<button>Next</button> <!-- Javascript準備のこと -->
+<button class='next-photo-btn'>Next</button> <!-- Javascript準備のこと -->
 <a href="/photos"><button>Top</button></a>
 <button>Prev</button> <!-- Javascript準備のこと -->
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="../static/scripts/form.js"></script>
 {% endblock %}
