@@ -1,10 +1,14 @@
 from flask import Flask, render_template
 from collections import namedtuple
 from datetime import date
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./static')
 
 Episode = namedtuple('Episode', ['number', 'title'])
-Photo = namedtuple('Photo', ['date', 'thumbnail'])
+Photo = namedtuple('Photo', ['id', 'date', 'path', 'thumbnail'])
+photo_list=sorted([Photo(id=0, date=date(2019,7,30), path='static/photos/20190730-chikazu.png',
+                         thumbnail='static/photos/thumbnail/20190730-chikazu.png'),
+                    Photo(id=1, date=date(2019,7,30), path='static/photos/20190730-hejichika.png',
+                          thumbnail='static/photos/thumbnail/20190730-hejichika.png'),])
 
 @app.route('/')
 def index():
@@ -26,11 +30,6 @@ def episode():
 def photos():
 # TODO データベース内のすべてのサムネイルを検索する
 # TODO 時間順でサムネイルを並べる
-    photo_list=sorted([Photo(date=date(2019,7,30),
-                      thumbnail='static/photos/20190730-chikazu.png'),
-                Photo(date=date(2019,7,30),
-                      thumbnail='static/photos/20190730-hejichika.png'),],reverse=True)
-
     return render_template('photos.html', photo_list=photo_list)
 
 # TODO POSTメソッドでphotoのidを受け渡す

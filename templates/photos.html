@@ -3,8 +3,8 @@
 <h1>List of photos</h1>
 {% for photo in photo_list %}
 <section>
-    <img alt="First view" src="{{photo.thumbnail}}">
-    {{photo.date}}
+    <a href="/photos/{{ photo.id }}"><img src="{{ photo.thumbnail }}"></a>
+    {{ photo.date }}
 </section>
 {% endfor %}
 {% endblock %}
