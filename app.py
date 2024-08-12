@@ -1,12 +1,24 @@
 from flask import Flask, render_template, request
+from flask_sqlalchemy import SQLAlchemy
 from collections import namedtuple
 from datetime import date
 app = Flask(__name__, static_folder='./static')
 
 Episode = namedtuple('Episode', ['number', 'title'])
-Photo = namedtuple('Photo', ['id', 'date', 'filename'])
-photo_list_model=[Photo(id=0, date=date(2019,7,30), filename='20190730-chikazu.png'),
-                    Photo(id=1, date=date(2019,7,30), filename='20190730-hejichika.png'),]
+# Photo = namedtuple('Photo', ['id', 'date', 'filename'])
+# photo_list_model=[Photo(id=0, date=date(2019,7,30), filename='20190730-chikazu.png'),
+#                     Photo(id=1, date=date(2019,7,30), filename='20190730-hejichika.png'),]
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///photos.db'
+db = SQLAlchemy(app)
+
+class Photo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.DateTime, nullable=False)
+    filename = db.Column(db.String(30), nullable=False)
+
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def index():
@@ -28,27 +40,27 @@ def episode():
 def photos():
 # TODO データベース内のすべてのサムネイルを検索する
 # TODO 時間順でサムネイルを並べる
+    photos = Photo.query.order_by(Photo.date).all()
     photo_list = []
-    for photo in photo_list_model:
-        print(photo)
-        photo_list.append({'id': photo.id,
-                           'date': photo.date,
-                           'thumbnail': f"static/photos/thumbnail/{photo.filename}"})
-    # [Photo(id=0, date=date(2019,7,30), path='static/photos/20190730-chikazu.png',
-    #                      thumbnail='static/photos/thumbnail/20190730-chikazu.png'),
-    #                 Photo(id=1, date=date(2019,7,30), path='static/photos/20190730-hejichika.png',
-    #                       thumbnail='20190730-hejichika.png'),])
+    for photo in photos:
+        photo_list.append({
+            'id': photo.id,
+            'date': photo.date,
+            'thumbnail':  f"static/photos/thumbnail/{photo.filename}"
+        })
     return render_template('photos.html', photo_list=photo_list)
 
 # TODO POSTメソッドでphotoのidを受け渡す
 # TODO データベースとの連携
 @app.route('/photos/<int:id>')
 def photo(id):
-    photo={'id':photo_list_model[id].id,
-           'date':photo_list_model[id].date,
-           'path':f"static/photos/{photo_list_model[id].filename}"}
-    
-    return render_template('photo.html', photo=photo)
+    photo = Photo.query.get(id)
+    photo_info = {
+        'id': photo.id,
+        'date': photo.date,
+        'path':  f"static/photos/{photo.filename}"
+    }
+    return render_template('photo.html', photo=photo_info)
 
 @app.route('/report')
 def report():
