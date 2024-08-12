@@ -4,11 +4,9 @@ from datetime import date
 app = Flask(__name__, static_folder='./static')
 
 Episode = namedtuple('Episode', ['number', 'title'])
-Photo = namedtuple('Photo', ['id', 'date', 'path', 'thumbnail'])
-photo_list=sorted([Photo(id=0, date=date(2019,7,30), path='static/photos/20190730-chikazu.png',
-                         thumbnail='static/photos/thumbnail/20190730-chikazu.png'),
-                    Photo(id=1, date=date(2019,7,30), path='static/photos/20190730-hejichika.png',
-                          thumbnail='static/photos/thumbnail/20190730-hejichika.png'),])
+Photo = namedtuple('Photo', ['id', 'date', 'filename'])
+photo_list_model=[Photo(id=0, date=date(2019,7,30), filename='20190730-chikazu.png'),
+                    Photo(id=1, date=date(2019,7,30), filename='20190730-hejichika.png'),]
 
 @app.route('/')
 def index():
@@ -30,13 +28,26 @@ def episode():
 def photos():
 # TODO データベース内のすべてのサムネイルを検索する
 # TODO 時間順でサムネイルを並べる
+    photo_list = []
+    for photo in photo_list_model:
+        print(photo)
+        photo_list.append({'id': photo.id,
+                           'date': photo.date,
+                           'thumbnail': f"static/photos/thumbnail/{photo.filename}"})
+    # [Photo(id=0, date=date(2019,7,30), path='static/photos/20190730-chikazu.png',
+    #                      thumbnail='static/photos/thumbnail/20190730-chikazu.png'),
+    #                 Photo(id=1, date=date(2019,7,30), path='static/photos/20190730-hejichika.png',
+    #                       thumbnail='20190730-hejichika.png'),])
     return render_template('photos.html', photo_list=photo_list)
 
 # TODO POSTメソッドでphotoのidを受け渡す
 # TODO データベースとの連携
 @app.route('/photos/<int:id>')
 def photo(id):
-    photo=photo_list[id]
+    photo={'id':photo_list_model[id].id,
+           'date':photo_list_model[id].date,
+           'path':f"static/photos/{photo_list_model[id].filename}"}
+    
     return render_template('photo.html', photo=photo)
 
 @app.route('/report')
