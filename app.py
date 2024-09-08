@@ -11,18 +11,21 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///photos.db'
 db = SQLAlchemy(app)
 
 class Episode(db.Model):
+    __tablename__ = "episode"
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     series = db.Column(db.String(30), nullable=False)
     title = db.Column(db.String(30), nullable=False)
     order = db.Column(db.Integer, nullable=False)
     filename = db.Column(db.String(30), nullable=False) #thumbnail
 
-#class Page(db.model):
-#    id = db.Column(db.Integer,  autoincrement=True, primary_key=True)
-#    episode_id = db.Column(db.Integer)
-#    order = db.Column(db.Integer, nullable=False)
-#    posision = db.Column(db.String(1), nullable=False,  server_default="r")  #c(center),l(left),r(right)
-#    episode_id = db.Column(db.Integer, ForeignKey("Episode.id", nullable=False)
+class Page(db.Model):
+   __tablename__ = "page"
+   id = db.Column(db.Integer,  autoincrement=True, primary_key=True)
+   order = db.Column(db.Integer, nullable=False)
+   episode_order = db.Column(db.Integer, ForeignKey("episode.order"))
+   filename = db.Column(db.String(30), nullable=False) #thumbnail
+   series = db.Column(db.String(30), ForeignKey("episode.series"))
+
 
 class Photo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -56,8 +59,16 @@ def episode_list(series):
 
 @app.route('/episode/<series>/<order>')
 def episode(series, order):
-    print(f'episode/{series}/{order}.html')
-    return render_template(f'episode/{series}/{order}')
+    pages=Page.query.order_by(Page.order).filter(Page.series==series).filter(Page.episode_order==order).all()
+    episodes=Episode.query.filter(Episode.order==order).filter(Episode.series==series).all()
+    title=episodes[0].title
+    print(episodes[0].title)
+    page_list = []
+    for page in pages:
+        page_list.append({
+            'filename': f"../../static/episode/{series}/{order}/{page.filename}"
+        })
+    return render_template('page.html',title=title, page_list=page_list)
 
 @app.route('/photos')
 def photos():

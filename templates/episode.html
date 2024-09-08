@@ -3,7 +3,7 @@
 <h1>Episode</h1>
     {% for episode in episode_list %}
     <section>
-        <a href="{{episode.order}}.html"><img src="{{ episode.thumbnail }}" width="100%">{{episode.order}}{{episode.title}}</a>
+        <a href="{{episode.order}}"><img src="{{ episode.thumbnail }}" width="100%">{{episode.order}}{{episode.title}}</a>
     </section>
     {% endfor %}
 {% endblock %}

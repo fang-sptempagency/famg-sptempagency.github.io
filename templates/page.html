@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>{{ title }}</h1>
+    {% for page in page_list %}
+    <section>
+        <img src="{{ page.filename }}">
+    </section>
+    {% endfor %}
+{% endblock %}
